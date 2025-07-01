@@ -1,0 +1,64 @@
+nav{ position:relative; margin: 0px 0 0 0;}
+.sf-menu ul, .sf-menu2 ul {position:absolute;top:-999px; display:none;/* left offset of submenus need to match (see below) */}
+.sf-menu ul li , .sf-menu2 ul li {width:100%}
+.sf-menu li, .sf-menu2 li {float:left;position:relative}
+
+.sf-menu>li>a, .sf-menu2>li>a{display:inline-block;position:relative; }
+.sf-menu li a:hover,.sf-menu li.current>a,.sf-menu li.sfHover>a, .sf-menu2 li a:hover,.sf-menu2 li.current>a,.sf-menu2 li.sfHover>a{color:#db364c;}
+
+.sf-menu>li, .sf-menu2>li{text-align:center;float:none;background: url('../images/nav_li.png') 0 bottom repeat-x;padding-bottom:6px;margin-bottom:10px;}
+.sf-menu, .sf-menu2{width:140px;float: left;}
+
+.sf-menu2{float:right;}
+
+nav .last_it{background:none;}
+.sf-menu a, .sf-menu2 a{font-size: 18px; line-height: 22px; color:#f1f1f2;text-transform:uppercase;}
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu li ul,.sf-menu li.sfHover ul{left:120px;background:#303134;top:-6px;width: 100px;border-left:4px solid #d83d50;padding:15px 0 10px; z-index:99}
+
+.sf-menu2 li ul,.sf-menu2 li.sfHover ul{left:-77px;background:#303134;top:-6px;width: 100px;border-right:4px solid #d83d50;padding:15px 0 10px; z-index:99}
+
+.sf-menu li ul:before,.sf-menu li.sfHover ul:before{width:4px;height:9px;background: url('../images/nav_ul_bef2.png') no-repeat;position: absolute; display:block;left:-8px;top:13px;content:"";}
+
+.sf-menu2 li ul:before,.sf-menu2 li.sfHover ul:before{width:4px;height:9px;background: url('../images/nav_ul_bef.png') no-repeat;position: absolute; display:block;right:-8px;top:13px;content:"";}
+
+.sf-menu>li>ul>li{}
+
+.sf-menu2 li ul li{margin-bottom:6px;}
+
+.sf-menu>li>ul>li>a{}
+.sf-menu li li a:hover, .sf-menu li.sfHover li.sfHover>a{}
+
+/*================================>> 3 Level <<========================================*/
+.sf-menu li li ul{left:111px !important;top:-15px !important;}
+
+.sf-menu2 li li ul{left:-111px !important;top:-15px !important;}
+
+.sf-menu li li li{}
+.sf-menu li li li a{}
+.sf-menu li li li a:hover{}
+
+.menu-arrow{display:none; width:8px;margin: -4px 0 0 5px;height:6px;text-indent:-1000%; font-size:0; line-height:0;background: url('../images/arrow_menu.png') no-repeat;vertical-align: middle;}
+a.sf-with-ul{padding-right:0px;}
+a:hover .menu-arrow, li.current>a .menu-arrow, .sfHover>a:hover .menu-arrow{background-position:0;}
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 995px) {
+	 
+}
+
+@media only screen and (max-width: 767px) {
+.menu-arrow{display:inline-block;}
+}
+
+@media only screen and (max-width: 479px) {
+	.sf-menu, .sf-menu2{float: none;}
+	nav .last_it{background:url('../images/nav_li.png') 0 bottom repeat-x;}
+	nav{padding-top:120px !important;}
+	.sf-menu li ul,.sf-menu li.sfHover ul,.sf-menu2 li ul,.sf-menu2 li.sfHover ul{left:111px;right:auto;top:-10px;border-left:4px solid #d83d50;border-right:none;}
+	.sf-menu li ul:before,.sf-menu li.sfHover ul:before, .sf-menu2 li ul:before,.sf-menu2 li.sfHover ul:before{right:auto;left:-8px !important;background: url('../images/nav_ul_bef2.png') no-repeat;}
+	.sf-menu2 li li, .sf-menu li li{margin-bottom:0 !important;}
+	
+	.sf-menu li li ul,.sf-menu li.sfHover li.sfHover ul,.sf-menu2 li li ul,.sf-menu2 li.sfHover li.sfHover ul{position: relative; overflow: hidden;left:0 !important;right:0 !important;top:0px;border:none;padding:20px 0 0;background:none;}
+	
+}

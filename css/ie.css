@@ -1,0 +1,3 @@
+.button, .service, .info>figure{behavior:url(js/PIE.htc);position:relative;}
+#carousel li a strong{ filter:alpha(opacity=0)}
+#carousel li a:hover strong{ filter:alpha(opacity=100)}
